@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../springbootmulti/dao/dao.iml" filepath="$PROJECT_DIR$/../springbootmulti/dao/dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springbootmulti/entity/entity.iml" filepath="$PROJECT_DIR$/../springbootmulti/entity/entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springbootmulti/service/service.iml" filepath="$PROJECT_DIR$/../springbootmulti/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springbootmulti/springboot-multi.iml" filepath="$PROJECT_DIR$/../springbootmulti/springboot-multi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springbootmulti/springbootmulti.iml" filepath="$PROJECT_DIR$/../springbootmulti/springbootmulti.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springbootmulti/web/web.iml" filepath="$PROJECT_DIR$/../springbootmulti/web/web.iml" />
+    </modules>
+  </component>
+</project>

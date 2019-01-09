@@ -1,0 +1,48 @@
+#redis配置
+
+  redis:
+      database: 0
+      host: 127.0.0.1
+      port: 6379
+      password: foobared
+      pool:
+        max-active: 8
+        max-wait: 1
+        max-idle: 8
+        min-idle: 0
+      timeout: 0
+
+
+  spring:
+    datasource:
+      druid:
+        name: project
+        url: jdbc:mysql://127.0.0.1:3306/sys?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=CONVERT_TO_NULL
+        username: root
+        password: 123456
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-calss: com.mysql.jdbc.Driver
+        #属性类型是字符串，通过别名的方式配置扩展插件常用的插件有：监控统计用的filter:stat 日志用的filter:log4j 防御sql注入的filter:wall
+        filters: stat
+        #初始化时建立物理连接的个数。初始化发生在显示调用init方法，或者第一次getConnection时
+        initialSize: 5
+        #最小连接池数量
+        minIdle: 5
+        #最大连接池数量
+        maxActive: 10
+        #有两个含义：1) Destroy线程会检测连接的间隔时间 2) testWhileIdle的判断依据，详细看testWhileIdle属性的说明
+        timeBetweenEvictionRunsMillis: 20000
+        #配置一个连接在池中最小生存的时间，单位是毫秒
+        minEvictableIdleTimeMillis: 300000
+        #用来检测连接是否有效的sql，要求是一个查询语句 如果validationQuery为null，testOnBorrow、testOnReturn、testWhileIdle都不会其作用。
+        validationQuery: SELECT '1' FROM DUAL
+        #建议配置为true，不影响性能，并且保证安全性。申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis 执行validationQuery检测连接是否有效
+        testWhileIdle: true
+        #申请连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能。
+        testOnBorrow: false
+        #归还连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能
+        testOnReturn: false
+        #要启用PSCache，必须配置大于0，当大于0时，poolPreparedStatements自动触发修改为true。 在Druid中，不会存在Oracle下PSCache占用内存过多的问题 可以把这个数值配置大一些，比如说100
+        maxOpenPreparedStatements: 100
+        #关闭 abanded 连接时输出错误日志
+        logAbandoned: true

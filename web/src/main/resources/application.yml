@@ -1,0 +1,21 @@
+#redis配置
+
+  redis:
+      database: 0
+      host: 127.0.0.1
+      port: 6379
+      password: foobared
+      pool:
+        max-active: 8
+        max-wait: 1
+        max-idle: 8
+        min-idle: 0
+      timeout: 0
+
+
+  spring:
+   datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/sys?useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: 123456
